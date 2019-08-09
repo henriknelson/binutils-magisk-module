@@ -1,0 +1,8 @@
+aarch64-linux-android-objdump;objdump
+aarch64-linux-android-strip;strip
+aarch64-linux-android-ranlib;ranlib
+gold;ld.gold
+aarch64-linux-android-ar;ar
+aarch64-linux-android-ld;ld
+aarch64-linux-android-nm;nm
+aarch64-linux-android-readelf;readelf

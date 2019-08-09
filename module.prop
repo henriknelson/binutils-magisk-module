@@ -1,0 +1,6 @@
+id=binutils-custom
+name=GNU binutils For Android
+version=v2.32
+versionCode=1
+author=nelshh
+description=Latest binutils cross-compiled for android (aarch64)

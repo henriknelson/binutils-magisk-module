@@ -1,0 +1,1 @@
+find -L . -xtype l -printf '%P;' -exec readlink {} \; > ~/develop/projects/binutils/binutils-module/symlinks_bin
