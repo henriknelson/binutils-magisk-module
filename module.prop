@@ -3,4 +3,4 @@ name=GNU binutils For Android
 version=v2.32
 versionCode=1
 author=nelshh
-description=Latest binutils cross-compiled for android (aarch64)
+description=A statically built version of the GNU binutils for android (aarch64)
