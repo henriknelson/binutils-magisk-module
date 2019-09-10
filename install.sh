@@ -145,7 +145,7 @@ set_permissions() {
   chown 0:0 $MODPATH/system/bin/*;
   chmod 755 $MODPATH/system/bin/*;
 
-  ui_print "[4/5] Installing to /system/libexec.."
+  ui_print "[4/5] Installing to /system/lib.."
   chown -R 0:0 $MODPATH/system/lib/ldscripts;
   find $MODPATH/system/lib/ldscripts -type d -exec chmod 755 {} +;
   find $MODPATH/system/lib/ldscripts -type f -exec chmod 755 {} +;
