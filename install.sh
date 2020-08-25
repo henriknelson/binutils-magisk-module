@@ -124,7 +124,7 @@ REPLACE="
 print_modname() {
 ui_print "*********************************************"
 ui_print "     GNU binutils for Android       	       "
-ui_print "         - v2.33.1                           "
+ui_print "         - v2.35                             "
 ui_print "         - built by nelshh @ xda-developers  "
 ui_print "*********************************************"
 }
@@ -132,23 +132,35 @@ ui_print "*********************************************"
 # Copy/extract your module files into $MODPATH in on_install.
 
 on_install() {
-  ui_print "[1/5] Extracting files..";
+  ui_print "[1/6] Extracting files..";
   unzip -o "$ZIPFILE" '*' -d $MODPATH >&2;
-  ui_print "[2/5] Installing files..";
+  ui_print "[2/6] Installing files..";
 }
 
 set_permissions() {
   # The following is the default rule, DO NOT remove
   set_perm_recursive $MODPATH 0 0 0755 0644;
 
-  ui_print "[3/5] Installing to /system/bin.."
+  ui_print "[3/6] Installing to /system/bin.."
   chown 0:0 $MODPATH/system/bin/*;
   chmod 755 $MODPATH/system/bin/*;
 
-  ui_print "[4/5] Installing to /system/lib.."
+  ui_print "[4/6] Installing to /system/lib.."
   chown -R 0:0 $MODPATH/system/lib;
   find $MODPATH/system/lib -type d -exec chmod 644 {} +;
   find $MODPATH/system/lib -type f -exec chmod 644 {} +;
 
-  ui_print "[5/5] Installation finished";
+  ui_print "[5/6] Installing to /data/man..";
+  mkdir -p /data/man;
+  cp -r $MODPATH/custom/man/* /data/man/;
+  chmod -R 755 /data/man;
+  chown -R 0:0 /data/man;
+  find /data/man -type d -exec chmod 755 {} \+;
+  find /data/man -type f -exec chmod 755 {} \+;
+  if [[ -s "/system/bin/mandoc" ]]; then
+     makewhatis /data/man;
+  fi
+
+  ui_print "[6/6] Installation finished";
+
 }

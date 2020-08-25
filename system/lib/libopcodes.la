@@ -17,7 +17,7 @@ old_library='libopcodes.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/system/lib'
+dependency_libs=' -L/system/lib -landroid-glob -landroid-spawn'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
