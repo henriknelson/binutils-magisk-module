@@ -124,7 +124,7 @@ REPLACE="
 print_modname() {
 ui_print "*********************************************"
 ui_print "     GNU binutils for Android       	       "
-ui_print "         - v2.35                             "
+ui_print "         - v2.35.1                           "
 ui_print "         - built by nelshh @ xda-developers  "
 ui_print "*********************************************"
 }
@@ -148,7 +148,7 @@ set_permissions() {
   ui_print "[4/6] Installing to /system/lib.."
   chown -R 0:0 $MODPATH/system/lib;
   find $MODPATH/system/lib -type d -exec chmod 644 {} +;
-  find $MODPATH/system/lib -type f -exec chmod 644 {} +;
+  find $MODPATH/system/lib -type f -exec chmod 755 {} +;
 
   ui_print "[5/6] Installing to /data/man..";
   mkdir -p /data/man;
