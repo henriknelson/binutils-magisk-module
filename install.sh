@@ -124,7 +124,7 @@ REPLACE="
 print_modname() {
 ui_print "*********************************************"
 ui_print "     GNU binutils for Android       	       "
-ui_print "         - v2.35.1                           "
+ui_print "         - v2.36.1                           "
 ui_print "         - built by nelshh @ xda-developers  "
 ui_print "*********************************************"
 }

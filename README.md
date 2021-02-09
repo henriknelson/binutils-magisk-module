@@ -6,6 +6,11 @@ This Magisk module installs the latest stable version of GNU binutils to the tar
 
 ## Change Log
 
+### v1.3 - 2021-02-09
+* Updated to v. 2.36.1
+
+### v1.2 - 2021-01-31
+* Updated to v. 2.36
 
 ### v1.1 - 2020-08-25
 * Updated to v. 2.35

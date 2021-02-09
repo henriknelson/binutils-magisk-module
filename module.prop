@@ -1,6 +1,6 @@
 id=binutils-nelshh
 name=GNU binutils For Android
-version=v2.35.1
-versionCode=4
+version=v2.36.1
+versionCode=6
 author=nelshh
 description=A statically built version of the GNU binutils for android (aarch64)
